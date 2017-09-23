@@ -2,4 +2,5 @@
 <div [style.color]="ericsColor">
  Hello {{name}}
 <div>
+    <input type="text" [value]="name" (blur)="name= $event.target.value">
 <button (click)="changeTextColor()">Change color</button>
