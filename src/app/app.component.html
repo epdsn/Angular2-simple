@@ -2,5 +2,13 @@
 <div [style.color]="ericsColor">
  Hello {{name}}
 <div>
-    <input type="text" [value]="name" (blur)="name= $event.target.value">
+
+<input type="text" [value]="name" (keyup.enter) ="name = $event.target.value">
+<input [(ngModel)]="name">
 <button (click)="changeTextColor()">Change color</button>
+<br>
+<ul >
+    <li *ngFor="let c of customers">
+        <app-customer [customer]="c" ></app-customer>     
+    </li>
+</ul>
