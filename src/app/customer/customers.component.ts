@@ -1,22 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomerService } from './customer.service';
+ 
 
 @Component({
     selector: 'app-customers',
     templateUrl: '/app/customer/customers.component.html',
+    providers : [CustomerService]
 })
 export class CustomersComponent implements OnInit {
     
     myColor = 'grey';
+    customers: any[];
 
-    customers = [
-        { id: 1, name: 'Eric' },
-        { id: 2, name: 'Jake' },
-        { id: 3, name: 'Phillip' },
-        { id: 4, name: 'Sally' },
-        { id: 5, name: 'John' },
-      ];
-    
-    constructor() { }
+    // shortcut in typescrip to create a private customer service object
+    constructor( private _customerService: CustomerService ) {}
 
-    ngOnInit() { }
+    ngOnInit() {
+        // better here for setsting 
+        this.customers = this._customerService.getCustomers();
+    }
 }

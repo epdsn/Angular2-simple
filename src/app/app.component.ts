@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CustomerService } from './customer/customer.service';
+
 
 @Component({
   selector: 'my-app',
