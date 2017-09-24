@@ -7,8 +7,4 @@
 <input [(ngModel)]="name">
 <button (click)="changeTextColor()">Change color</button>
 <br>
-<ul >
-    <li *ngFor="let c of customers">
-        <app-customer [customer]="c" ></app-customer>     
-    </li>
-</ul>
+<app-customers></app-customers>

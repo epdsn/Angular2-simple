@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';   
 
 @Component({
     selector: 'app-customer', // <app-customer>
@@ -7,6 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CustomerComponent implements OnInit {
     @Input() customer: {id: number, name : string};
     
+    myColor = 'gray';
+
     constructor() { }
 
     ngOnInit() {  }
