@@ -1,10 +1,13 @@
 <h1>Welcome to {{title}}</h1>
 <div [style.color]="ericsColor">
  Hello {{name}}
-<div>
+</div>
 
 <input type="text" [value]="name" (keyup.enter) ="name = $event.target.value">
 <input [(ngModel)]="name">
 <button (click)="changeTextColor()">Change color</button>
 <br>
+<app-customers></app-customers>
+<app-customers></app-customers>
+<app-customers></app-customers>
 <app-customers></app-customers>

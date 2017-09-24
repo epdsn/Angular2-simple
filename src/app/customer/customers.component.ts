@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomersComponent implements OnInit {
     
+    myColor = 'grey';
+
     customers = [
         { id: 1, name: 'Eric' },
         { id: 2, name: 'Jake' },
