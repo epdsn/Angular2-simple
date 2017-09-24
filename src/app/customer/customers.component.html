@@ -1,5 +1,5 @@
 <ul >
-    <li *ngFor="let c of customers" [style.color]="myColor">
+    <li *ngFor="let c of customers | async" [style.color]="myColor">
         <app-customer [customer]="c" ></app-customer>     
     </li>
 </ul>

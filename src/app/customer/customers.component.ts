@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerService } from './customer.service';
- 
+import { Observable } from 'rxjs/Rx';
 
 @Component({
     selector: 'app-customers',
@@ -10,7 +10,7 @@ import { CustomerService } from './customer.service';
 export class CustomersComponent implements OnInit {
     
     myColor = 'grey';
-    customers: any[];
+    customers: Observable<any[]>;
 
     // shortcut in typescrip to create a private customer service object
     constructor( private _customerService: CustomerService ) {}
